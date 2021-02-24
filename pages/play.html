@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pokeman Battle</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="play">
+        <div class="full-bg-img">
+            <div id="play-container" class="container">
+                <div></div>
+                <div id="card-container" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-6 mt-4">
+                    <div id="card-unit-1" class="col">
+                        <div class="card-piece">
+                            <h3 class="text-center mt-2 text-white-50">CHARIZARD</h3>
+                            <div class="image-container">
+                                <img class="figure" src="../images/charizard_1.gif" class="card-img-top"
+                                    alt="charizard">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title text-center text-danger mb-4">HP 500/500</h4>
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 g-2">
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/fire_background_2.png"
+                                                alt="fire background for attacksets">
+                                            <div class="card-img-overlay">
+                                                <h6 class="card-title ">Flame-throw</h6>
+                                                <p class="card-text">max: 80</p>
+                                                <p class="card-text">min: 40</p>
+                                                <p class="card-text">lifelink: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/fire_background_2.png" alt="">
+                                            <div class="card-img-overlay">
+                                                <h6>Dragonclaw</h6>
+                                                <p>max: 60</p>
+                                                <p>min: 30</p>
+                                                <p>lifelink: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/fire_background_2.png" alt="">
+                                            <div class="card-img-overlay">
+                                                <h6>Normal-set</h6>
+                                                <p>max: 50</p50>
+                                                <p>min: 50</p>
+                                                <p>lifelink: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/fire_background_2.png" alt="">
+                                            <div class="card-img-overlay">
+                                                <h6>Lifelink-set</h6>
+                                                <p>max: 50</p>
+                                                <p>min: 50</p>
+                                                <p>lifelink: 30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="card-text text-white mt-2">This is a longer card with supporting text below as
+                                    a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                                <button class="d-grid gap-2 col-6 mx-auto btn-outline-dark" onclick="select('charizard')">SELECT</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card-unit-2" class="col">
+                        <div class="card-piece">
+                            <h3 class="text-center mt-2 text-white-50">BLASTOISE</h3>
+                            <div class="image-container">
+                                <img class="figure" src="../images/blastoise_1.gif" class="card-img-top"
+                                    alt="blastoise">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title text-center text-danger mb-4">HP 1000/1000</h4>
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 g-2">
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/water_background_2.jpg"
+                                                alt="water background for attacksets">
+                                            <div class="card-img-overlay">
+                                                <h6>Surf-blow</h6>
+                                                <p>max: 50</p>
+                                                <p>min: 30</p>
+                                                <p>lifelink: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/water_background_2.jpg"
+                                                alt="water background for attacksets">
+                                            <div class="card-img-overlay">
+                                                <h6>Crunch-set</h6>
+                                                <p>max: 40</p>
+                                                <p>min: 20</p>
+                                                <p>lifelink: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/water_background_2.jpg"
+                                                alt="water background for attacksets">
+                                            <div class="card-img-overlay">
+                                                <h6>Normal-set</h6>
+                                                <p>max: 30</p50>
+                                                <p>min: 30</p>
+                                                <p>lifelink: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/water_background_2.jpg"
+                                                alt="water background for attacksets">
+                                            <div class="card-img-overlay">
+                                                <h6>Lifelink-set</h6>
+                                                <p>max: 30</p>
+                                                <p>min: 30</p>
+                                                <p>lifelink: 15</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="card-text text-white mt-2">This is a longer card with supporting text below as
+                                    a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                                <button class="d-grid gap-2 col-6 mx-auto btn-outline-dark" onclick="select('blastoise')">SELECT</button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="card-unit-3" class="col">
+                        <div class="card-piece">
+                            <h3 class="text-center mt-2 text-white-50">VENUSAUR</h3>
+                            <div class="image-container">
+                                <img class="figure" src="../images/venusaur_1.gif" class="card-img-top" alt="venusaur">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title text-center text-danger mb-4">HP 200/200</h4>
+                                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-4 g-2">
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/green_smoke_background_2.jpg"
+                                                alt="poison background for attacksets">
+                                            <div class="card-img-overlay">
+                                                <h6>Blizzard-set</h6>
+                                                <p>max: 200</p>
+                                                <p>min: 150</p>
+                                                <p>lifelink: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/green_smoke_background_2.jpg"
+                                                alt="poison background for attacksets">
+                                            <div class="card-img-overlay">
+                                                <h6>Bigbomb-set</h6>
+                                                <p>max: 150</p>
+                                                <p>min: 100</p>
+                                                <p>lifelink: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/green_smoke_background_2.jpg"
+                                                alt="poison background for attacksets">
+                                            <div class="card-img-overlay">
+                                                <h6>Normal-set</h6>
+                                                <p>max: 100</p50>
+                                                <p>min: 100</p>
+                                                <p>lifelink: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-center text-white">
+                                            <img class="card-img" src="../images/green_smoke_background_2.jpg"
+                                                alt="poison background for attacksets">
+                                            <div class="card-img-overlay">
+                                                <h6>Lifelink-set</h6>
+                                                <p>max: 100</p>
+                                                <p>min: 100</p>
+                                                <p>lifelink: 50</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="card-text text-white mt-2">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                                <button class="d-grid gap-2 col-6 mx-auto btn-outline-dark" onclick="select('venusaur')">SELECT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="button"
+                        class="btn btn-dark btn-outline-light btn-lg"
+                        onclick="goToHome()">HOME</button>
+                    <button type="button"
+                        class="btn btn-dark btn-outline-light btn-lg"
+                        onclick="goToLanding()">EXIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <!-- JQuery -->
+    <script src="../js/jquery.slim.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/play.js"></script>
+</body>
+
+</html>

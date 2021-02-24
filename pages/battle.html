@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pokeman Battle</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="battle">
+        <div class="full-bg-img">
+            <div id="battle-container" class="container">
+                <div class="row row-cols-xl-4 g-2">
+                    <div class="col">
+                        <div class="card">
+                            <h2 id="hp1"></h2>
+                            <div id="selection-user"></div>
+                            <div class="card-body">
+                                <input type="button" onclick="attackOne()" class="btn" id="m0">
+                                <input type="button" onclick="attackTwo()" class="btn" id="m1">
+                                <input type="button" onclick="attackThree()" class="btn" id="m2">
+                                <input type="button" onclick="attackFour()" class="btn" id="m3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <h2 id="hp2"></h2>
+                            <div id="selection-computer"></div>
+                            <div class="card-body">
+                                <input class="btn" id="n0">
+                                <input class="btn" id="n1">
+                                <input class="btn" id="n2">
+                                <input class="btn" id="n3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="btn-container">
+                <div></div>
+                <button class="btn btn-dark btn-outline-light btn-lg col-sm-3 col-xl-2 py-2"
+                    onclick="goToHome()">ENTER</button>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <!-- JQuery -->
+    <script src="../js/jquery.slim.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/battle.js"></script>
+</body>
+
+</html>

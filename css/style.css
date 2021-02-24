@@ -34,10 +34,104 @@ header,
     display: grid;
     justify-items: start;
     align-items: start;
-    grid-template-rows: 30vh 20vh auto;
+    grid-template-rows: 10vh 40vh auto;
 }
 
 #home-btn-container {
     display: grid;
+    justify-items: start;
+    align-items: start;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1em;
+}
+
+#rule {
+    background: url("../images/pokeman_battle_rule_image.gif")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#rule-container {
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /* grid-template-rows: 10vh 40vh auto; */
+}
+
+#rule-btn-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#play {
+    background: url("../images/pokeman_battle_play_image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#play-container {
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 5vh auto 20vh;
+}
+
+#card-unit-1 {
+    background: url("../images/fire_background.gif")no-repeat center left fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 2px solid white;
+}
+
+.card-piece {
+    min-height: 50vh;
+}
+
+.image-container {
+    width: 90%;
+    height: 40vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.figure {
+    width: 90%;
+    align-self: center;
+}
+
+.card-img {
+    height: 30vh;
+}
+
+.card-img-overlay {
+    height: 30vh;
+}
+
+#card-unit-2 {
+    background: url("../images/water_background.gif")no-repeat center left fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 2px solid white;
+}
+
+#card-unit-3 {
+    background: url("../images/poison_background.gif")no-repeat center left fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 2px solid white;
 }
 
