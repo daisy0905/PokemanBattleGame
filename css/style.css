@@ -1,0 +1,43 @@
+html,
+body,
+header,
+#landing {
+    height: 100%;
+}
+
+#landing {
+    background: url("../images/pokeman_battle_landing_image.jpeg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#btn-container {
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 80vh 10vh 10vh;
+}
+
+#home {
+    background: url("../images/pokeman_battle_home_image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#home-container {
+    height: 100vh;
+    display: grid;
+    justify-items: start;
+    align-items: start;
+    grid-template-rows: 30vh 20vh auto;
+}
+
+#home-btn-container {
+    display: grid;
+}
+
