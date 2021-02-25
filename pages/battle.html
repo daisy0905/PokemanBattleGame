@@ -17,38 +17,48 @@
     <div id="battle">
         <div class="full-bg-img">
             <div id="battle-container" class="container">
-                <div class="row row-cols-xl-4 g-2">
-                    <div class="col">
-                        <div class="card">
-                            <h2 id="hp1"></h2>
-                            <div id="selection-user"></div>
+                <div></div>
+                <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 g-2">
+                    <div class="col pt-5">
+                        <div>
+                            <h2 id="hp1" class="py-4 text-danger"></h2>
+                            <img id="selection-user" class="card-img-top" src="" alt="">
                             <div class="card-body">
-                                <input type="button" onclick="attackOne()" class="btn" id="m0">
-                                <input type="button" onclick="attackTwo()" class="btn" id="m1">
-                                <input type="button" onclick="attackThree()" class="btn" id="m2">
-                                <input type="button" onclick="attackFour()" class="btn" id="m3">
+                                <div class="d-grid gap-1 col-2 col-xl-4">
+                                    <button onclick="attackOne()" class="btn btn-secondary btn-outline-danger btn-md"
+                                        id="m0"></button>
+                                    <button onclick="attackTwo()" class="btn btn-secondary btn-outline-danger btn-md"
+                                        id="m1"></button>
+                                    <button onclick="attackThree()" class="btn btn-secondary btn-outline-danger btn-md"
+                                        id="m2"></button>
+                                    <button onclick="attackFour()" class="btn btn-secondary btn-outline-danger btn-md"
+                                        id="m3"></button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="d-none d-sm-block d-md-none d-lg-block col"></div>
                     <div class="col">
-                        <div class="card">
-                            <h2 id="hp2"></h2>
-                            <div id="selection-computer"></div>
+                        <div>
+                            <h2 id="hp2" class="py-4 text-danger"></h2>
+                            <img id="selection-computer" class="card-img-top" src="" alt="">
                             <div class="card-body">
-                                <input class="btn" id="n0">
-                                <input class="btn" id="n1">
-                                <input class="btn" id="n2">
-                                <input class="btn" id="n3">
+                                <div class="d-grid gap-1 col-4 col-xl-4">
+                                    <button class="btn btn-outline-dark btn-md" id="n0"></button>
+                                    <button class="btn btn-outline-dark btn-md" id="n1"></button>
+                                    <button class="btn btn-outline-dark btn-md" id="n2"></button>
+                                    <button class="btn btn-outline-dark btn-md" id="n3"></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="btn-container">
-                <div></div>
-                <button class="btn btn-dark btn-outline-light btn-lg col-sm-3 col-xl-2 py-2"
-                    onclick="goToHome()">ENTER</button>
-                <div></div>
+                <div class="d-grid gap-2 col-6 col-xl-4 mx-auto">
+                    <button type="button" class="btn btn-outline-light btn-lg"
+                        onclick="goToHome()">HOME</button>
+                    <button type="button" class="btn btn-outline-light btn-lg mb-2"
+                        onclick="goToLanding()">EXIT</button>
+                </div>
             </div>
         </div>
     </div>

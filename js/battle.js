@@ -43,12 +43,10 @@ var compPkmGet = Cookies.get('compPkm')
 for (let k = 0; k < pkmList.length; k++) {
     selection = document.getElementById('selection-user');
     if (userSelection == pkmList[k].name) {
-        img = document.createElement('img');
-        img.src = pkmList[k].url
-        console.log(img.src)
-        selection.appendChild(img)
+        selection.innerHTML = pkmList[k].url
+        selection.setAttribute("src", pkmList[k].url)
         for (i = 0; i < 4; i++) {
-            document.getElementById('m' + i).value = pkmList[k].attackSets[i];
+            document.getElementById('m' + i).innerHTML = pkmList[k].attackSets[i][0];
         }
         var userMaxHP = pkmList[k].maxHP;
         Cookies.set("userMaxHP", userMaxHP)
@@ -64,7 +62,7 @@ for (let k = 0; k < pkmList.length; k++) {
         var healingPoint4 = pkmList[k].attackSets[3][3];
 
         // randomly create computer-player
-        if(compPkmGet == undefined) {
+        if (compPkmGet == undefined) {
             computerCreation();
         } else {
             compSelection = document.getElementById('selection-computer');
@@ -72,11 +70,10 @@ for (let k = 0; k < pkmList.length; k++) {
             for (t = 0; t < pkmList.length; t++) {
                 if (compPkm == pkmList[t].name) {
                     for (s = 0; s < 4; s++) {
-                        document.getElementById('n' + s).value = pkmList[t].attackSets[s];
+                        document.getElementById('n' + s).innerHTML = pkmList[t].attackSets[s][0];
                     }
-                    img = document.createElement('img');
-                    img.src = Cookies.get("imageUrl")
-                    compSelection.appendChild(img)
+                    compSelection.innerHTML = pkmList[t].url
+                    compSelection.setAttribute("src", pkmList[t].url)
                 }
             }
         }
@@ -165,10 +162,10 @@ function checkWinner() {
     if (Cookies.get("userCurrentHP") <= 0 && Cookies.get("computerCurrentHP") > 0) {
         alert('<p>GAME OVER: computer wins!</p>');
         document.getElementById('hp1').innerHTML = '<p>HP: ' + Cookies.get("userCurrentHP") + '/' + userMaxHP + '</p>';
-    } else if(Cookies.get("computerCurrentHP") <= 0 && Cookies.get("userCurrentHP") > 0) {
+    } else if (Cookies.get("computerCurrentHP") <= 0 && Cookies.get("userCurrentHP") > 0) {
         alert('<p>GAME OVER: user wins!</p>');
         document.getElementById('hp2').innerHTML = '<p>HP: ' + Cookies.get("computerCurrentHP") + '/' + computerMaxHP + '</p>';
-    } else if(Cookies.get("userCurrentHP") < 0 && Cookies.get("computerCurrentHP") < 0) {
+    } else if (Cookies.get("userCurrentHP") < 0 && Cookies.get("computerCurrentHP") < 0) {
         alert('<p>GAME OVER: Tie!</p>');
         document.getElementById('hp1').innerHTML = '<p>HP: ' + Cookies.get("userCurrentHP") + '/' + userMaxHP + '</p>';
         document.getElementById('hp2').innerHTML = '<p>HP: ' + Cookies.get("computerCurrentHP") + '/' + computerMaxHP + '</p>';
@@ -191,10 +188,10 @@ function computerAttack() {
             Cookies.set("userCurrentHP", userCurrentHP)
             document.getElementById('hp1').innerHTML = '<p>HP:' + userCurrentHP + '/' + Cookies.get("userMaxHP") + '</p>';
             document.getElementById('hp2').innerHTML = '<p>HP:' + computerCurrentHP + '/' + Cookies.get("computerMaxHP") + '</p>';
-            }
         }
     }
-   
+}
+
 
 function computerCreation() {
     compSelection = document.getElementById('selection-computer');
@@ -202,12 +199,11 @@ function computerCreation() {
     for (n = 0; n < pkmList.length; n++) {
         if (compPkm.name == pkmList[n].name) {
             for (s = 0; s < 4; s++) {
-                document.getElementById('n' + s).value = pkmList[n].attackSets[s];
+                document.getElementById('n' + s).innerHTML = pkmList[n].attackSets[s];
             }
-            img = document.createElement('img');
-            img.src = pkmList[n].url
-            Cookies.set("imageUrl", img.src)
-            compSelection.appendChild(img)
+            compSelection.innerHTML = pkmList[n].url
+            compSelection.setAttribute("src", pkmList[n].url)
+            Cookies.set("imageUrl", pkmList[n].url)
             Cookies.set("compPkm", compPkm.name);
             Cookies.set("computerMaxHP", compPkm.maxHP)
         }
