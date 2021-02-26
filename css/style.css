@@ -83,6 +83,15 @@ header,
     grid-template-rows: 5vh auto 20vh;
 }
 
+.carousel-item {
+    min-height: 100vh;
+    /* position: relative; */
+}
+
+.item-container {
+    position: absolute;
+}
+
 #card-unit-1 {
     background: url("../images/fire_background.gif")no-repeat center left fixed;
     -webkit-background-size: cover;
@@ -93,12 +102,12 @@ header,
 }
 
 .card-piece {
-    min-height: 50vh;
+    min-height: 100vh;
 }
 
 .image-container {
     width: 90%;
-    height: 40vh;
+    /* height: 40vh; */
     display: grid;
     justify-items: center;
     align-items: center;
