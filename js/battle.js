@@ -2,35 +2,38 @@ var pkmList = [
     {
         name: 'charizard',
         maxHP: 550,
-        url: "https://upload.wikimedia.org/wikipedia/en/1/1f/Pok%C3%A9mon_Charizard_art.png",
+        url: "../images/charizard_1.gif",
         attackSets: [
-            ['Flamethrower', 80, 40, 0],
-            ['DragonClaw', 60, 30, 0],
+            ['Flame', 80, 40, 0],
+            ['Dragon', 60, 30, 0],
             ['Normal', 50, 50, 0],
-            ['LifeLink', 50, 50, 30]
-        ]
+            ['Lifelink', 50, 50, 30]
+        ],
+        background: "../images/fire_2.gif"
     },
     {
         name: 'blastoise',
         maxHP: 1000,
-        url: "https://images.gameinfo.io/pokemon/256/009-00.png",
+        url: "../images/blastoise_1.gif",
         attackSets: [
             ['Surf', 50, 30, 0],
             ['Crunch', 40, 20, 0],
             ['Normal', 30, 30, 0],
-            ['LifeLink', 30, 30, 15]
-        ]
+            ['Lifelink', 30, 30, 15]
+        ],
+        background: "../images/water_1.gif"
     },
     {
         name: 'venusaur',
         maxHP: 200,
-        url: "https://images.gameinfo.io/pokemon/256/003-01.png",
+        url: "../images/venusaur_1.gif",
         attackSets: [
             ['Blizzard', 200, 150, 0],
             ['Bomb', 150, 100, 0],
             ['Normal', 100, 100, 0],
-            ['LifeLink', 100, 100, 50],
-        ]
+            ['Lifelink', 100, 100, 50],
+        ],
+        background: "../images/poison_1.gif"
     }]
 
 //pick between 3 different Pokemon from homepage, set cookie for the selection and read the cookie in the battle page
@@ -45,6 +48,7 @@ for (let k = 0; k < pkmList.length; k++) {
     if (userSelection == pkmList[k].name) {
         selection.innerHTML = pkmList[k].url
         selection.setAttribute("src", pkmList[k].url)
+        document.getElementById("user-background").setAttribute("style", "background-image: url("+ pkmList[k].background + ");background-repeat: no-repeat;background-size: cover"); 
         for (i = 0; i < 4; i++) {
             document.getElementById('m' + i).innerHTML = pkmList[k].attackSets[i][0];
         }
@@ -74,6 +78,7 @@ for (let k = 0; k < pkmList.length; k++) {
                     }
                     compSelection.innerHTML = pkmList[t].url
                     compSelection.setAttribute("src", pkmList[t].url)
+                    document.getElementById("computer-background").setAttribute("style", "background-image: url("+ pkmList[t].background + ");background-repeat: no-repeat;background-size: cover"); 
                 }
             }
         }
@@ -160,13 +165,13 @@ for (let k = 0; k < pkmList.length; k++) {
 
 function checkWinner() {
     if (Cookies.get("userCurrentHP") <= 0 && Cookies.get("computerCurrentHP") > 0) {
-        alert('<p>GAME OVER: computer wins!</p>');
+        document.getElementById("battle-result").innerHTML = "Computer Wins!";
         document.getElementById('hp1').innerHTML = '<p>HP: ' + Cookies.get("userCurrentHP") + '/' + userMaxHP + '</p>';
     } else if (Cookies.get("computerCurrentHP") <= 0 && Cookies.get("userCurrentHP") > 0) {
-        alert('<p>GAME OVER: user wins!</p>');
+        document.getElementById("battle-result").innerHTML = "You Wins!";
         document.getElementById('hp2').innerHTML = '<p>HP: ' + Cookies.get("computerCurrentHP") + '/' + computerMaxHP + '</p>';
     } else if (Cookies.get("userCurrentHP") < 0 && Cookies.get("computerCurrentHP") < 0) {
-        alert('<p>GAME OVER: Tie!</p>');
+        document.getElementById("battle-result").innerHTML = "Tie!";
         document.getElementById('hp1').innerHTML = '<p>HP: ' + Cookies.get("userCurrentHP") + '/' + userMaxHP + '</p>';
         document.getElementById('hp2').innerHTML = '<p>HP: ' + Cookies.get("computerCurrentHP") + '/' + computerMaxHP + '</p>';
     }
@@ -199,10 +204,11 @@ function computerCreation() {
     for (n = 0; n < pkmList.length; n++) {
         if (compPkm.name == pkmList[n].name) {
             for (s = 0; s < 4; s++) {
-                document.getElementById('n' + s).innerHTML = pkmList[n].attackSets[s];
+                document.getElementById('n' + s).innerHTML = pkmList[n].attackSets[s][0];
             }
             compSelection.innerHTML = pkmList[n].url
             compSelection.setAttribute("src", pkmList[n].url)
+            document.getElementById("computer-background").setAttribute("style", "background-image: url("+ pkmList[n].background + ");background-repeat: no-repeat;background-size: cover"); 
             Cookies.set("imageUrl", pkmList[n].url)
             Cookies.set("compPkm", compPkm.name);
             Cookies.set("computerMaxHP", compPkm.maxHP)
