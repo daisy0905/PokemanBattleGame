@@ -5,6 +5,11 @@ header,
     height: 100%;
 }
 
+body {
+    font-family: 'Play', sans-serif;
+    font-weight: bold;
+}
+
 #landing {
     background: url("../images/pokeman_battle_landing_image.jpeg")no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -54,7 +59,7 @@ header,
 }
 
 #rule-container {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -193,4 +198,23 @@ header,
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.img-responsive {
+    cursor: pointer;
+}
+
+#battle-result {
+    color: #fff;
+    animation: glow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
 }

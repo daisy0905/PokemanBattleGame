@@ -170,6 +170,7 @@ for (let k = 0; k < pkmList.length; k++) {
         document.getElementById('hp2').innerHTML = '<p>HP:' + computerCurrentHP + '/' + computerMaxHP + '</p>';
 
         function attackOne() {
+            document.getElementById("battle-result").innerHTML = "GO! GO! GO!";
             document.getElementById('selection-user').innerHTML = Cookies.get("userAttack1");
             document.getElementById('selection-user').setAttribute("src", Cookies.get("userAttack1"));
             var compDamagePoint1 = Math.floor(Math.random() * (maxAttack1 - minAttack1 + 1)) + minAttack1;
@@ -185,6 +186,7 @@ for (let k = 0; k < pkmList.length; k++) {
         }
 
         function attackTwo() {
+            document.getElementById("battle-result").innerHTML = "GO! GO! GO!";
             document.getElementById('selection-user').innerHTML = Cookies.get("userAttack2");
             document.getElementById('selection-user').setAttribute("src", Cookies.get("userAttack2"));
             var compDamagePoint2 = Math.floor(Math.random() * (maxAttack2 - minAttack2 + 1)) + minAttack2;
@@ -200,6 +202,7 @@ for (let k = 0; k < pkmList.length; k++) {
         }
 
         function attackThree() {
+            document.getElementById("battle-result").innerHTML = "GO! GO! GO!";
             document.getElementById('selection-user').innerHTML = Cookies.get("userAttack3");
             document.getElementById('selection-user').setAttribute("src", Cookies.get("userAttack3"));
             var compDamagePoint3 = maxAttack3;
@@ -215,6 +218,7 @@ for (let k = 0; k < pkmList.length; k++) {
         }
 
         function attackFour() {
+            document.getElementById("battle-result").innerHTML = "GO! GO! GO!";
             document.getElementById('selection-user').innerHTML = Cookies.get("userAttack4");
             document.getElementById('selection-user').setAttribute("src", Cookies.get("userAttack4"));
             var compDamagePoint4 = maxAttack4;
@@ -247,7 +251,7 @@ function checkWinner() {
         document.getElementById("battle-result").innerHTML = "Computer Wins!";
         document.getElementById('hp1').innerHTML = '<p>HP: ' + Cookies.get("userCurrentHP") + '/' + userMaxHP + '</p>';
     } else if (Cookies.get("computerCurrentHP") <= 0 && Cookies.get("userCurrentHP") > 0) {
-        document.getElementById("battle-result").innerHTML = "You Wins!";
+        document.getElementById("battle-result").innerHTML = "You Win!";
         document.getElementById('hp2').innerHTML = '<p>HP: ' + Cookies.get("computerCurrentHP") + '/' + computerMaxHP + '</p>';
     } else if (Cookies.get("userCurrentHP") < 0 && Cookies.get("computerCurrentHP") < 0) {
         document.getElementById("battle-result").innerHTML = "Tie!";
