@@ -51,7 +51,7 @@ body {
 }
 
 #rule {
-    background: url("../images/pokeman_battle_rule_image.gif")no-repeat center center fixed;
+    background: url("../images/pokeman_battle_play_image.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
