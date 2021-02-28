@@ -271,18 +271,34 @@ function computerAttack() {
                 console.log(Cookies.get("compAttack1"));
                 document.getElementById('selection-computer').innerHTML = Cookies.get("compAttack1");
                 document.getElementById('selection-computer').setAttribute("src", Cookies.get("compAttack1"));
+                document.getElementById('n0').style.backgroundColor="red";
+                document.getElementById('n1').style.backgroundColor="black";
+                document.getElementById('n2').style.backgroundColor="black";
+                document.getElementById('n3').style.backgroundColor="black";
             } else if (compAttackSet == pkmList[j].attackSets[1]) {
                 console.log(Cookies.get("compAttack2"));
                 document.getElementById('selection-computer').innerHTML = Cookies.get("compAttack2");
                 document.getElementById('selection-computer').setAttribute("src", Cookies.get("compAttack2"));
+                document.getElementById('n0').style.backgroundColor="black";
+                document.getElementById('n1').style.backgroundColor="red";
+                document.getElementById('n2').style.backgroundColor="black";
+                document.getElementById('n3').style.backgroundColor="black";
             } else if (compAttackSet == pkmList[j].attackSets[2]) {
                 console.log(Cookies.get("compAttack3"));
                 document.getElementById('selection-computer').innerHTML = Cookies.get("compAttack3");
                 document.getElementById('selection-computer').setAttribute("src", Cookies.get("compAttack3")); 
+                document.getElementById('n0').style.backgroundColor="black";
+                document.getElementById('n1').style.backgroundColor="black";
+                document.getElementById('n2').style.backgroundColor="red";
+                document.getElementById('n3').style.backgroundColor="black";
             } else if (compAttackSet == pkmList[j].attackSets[3]) {
                 console.log(Cookies.get("compAttack4"));
                 document.getElementById('selection-computer').innerHTML = Cookies.get("compAttack4");
                 document.getElementById('selection-computer').setAttribute("src", Cookies.get("compAttack4"));
+                document.getElementById('n0').style.backgroundColor="black";
+                document.getElementById('n1').style.backgroundColor="black";
+                document.getElementById('n2').style.backgroundColor="black";
+                document.getElementById('n3').style.backgroundColor="red";
             }
             var userDamagePoint = Math.floor(Math.random() * (compAttackSet[1] - compAttackSet[2] + 1)) + compAttackSet[2];
             console.log(userDamagePoint)
